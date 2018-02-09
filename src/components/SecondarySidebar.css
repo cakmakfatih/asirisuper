@@ -1,0 +1,41 @@
+.app-secondary-sidebar {
+  width:22%;
+  background:#0288d1;
+  height:100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.secondary-menu-item {
+  background:#0277bd;
+  height:50px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  color:#fff;
+  cursor:pointer;
+  font-family: Muli;
+  transition:all .3s;
+}
+.secondary-menu-item span {
+  margin-left:4px;
+}
+.secondary-menu-item i {
+  margin-right:4px;
+}
+.secondary-menu-item:hover {
+  background:#fff;
+  color:#0277bd;
+}
+.secondary-active {
+  background:#fff;
+  color:#0277bd;
+  border-left:8px solid #0277bd;
+}
+.secondary-active:hover {
+  cursor:default;
+}
+.secondary-upper-menu {
+  display:flex;
+  flex-direction: column;
+}

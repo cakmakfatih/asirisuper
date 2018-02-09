@@ -1,0 +1,32 @@
+.sidebar-container {
+  height:100%;
+  width:5%;
+  background: #fff;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.menu-item {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  color:#0288d1;
+  width: 100%;
+  font-size:20px;
+  cursor:pointer;
+  background:#fff;
+  padding-bottom:20px;
+  padding-top:20px;
+  transition:all .3s;
+}
+.menu-item:hover {
+  background:#0288d1;
+  color:#fff;
+}
+.active {
+  background:#0288d1;
+  color:#fff;
+}
+.active:hover {
+  cursor:default;
+}

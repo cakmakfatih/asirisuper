@@ -1,0 +1,42 @@
+.app-signin {
+  width:100%;
+  height:100%;
+  position:absolute;
+  background:#0288d1;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.form-container {
+  width:30%;
+  background:#fafafa;
+  padding-top:20px;
+  padding-bottom:20px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.form-container div {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width:80%;
+}
+a {
+  text-decoration: none;
+}
+.form-container span {
+  font-family: Muli;
+  font-weight: bold;
+}
+.app-signin h1 {
+  color:#fff;
+  font-family:Quicksand;
+  font-weight: 700;
+  transition: all .3s;
+}
+.app-signin h1:hover {
+  color:#05aaf3;
+}
