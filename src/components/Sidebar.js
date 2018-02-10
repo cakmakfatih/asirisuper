@@ -4,7 +4,7 @@ import './Sidebar.css';
 class Sidebar extends Component {
   constructor(props){
     super(props);
-    this.state = { active:this.props.items.length - 1 }
+    this.state = { active:0 }
   }
   setPage(key){
     this.setState({

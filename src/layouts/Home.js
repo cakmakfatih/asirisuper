@@ -26,7 +26,7 @@ class Home extends Component {
       <div className="App">
         {this.redirect()}
         <div className="app-welcome">
-          <i className="fas fa-handshake iconLogo"></i>
+          <i className="fab fa-gripfire iconLogo"></i>
           <h1>aşırısüper</h1>
           <h2>sadece aşırı süper insanların kullanabileceği program</h2>
           <div>

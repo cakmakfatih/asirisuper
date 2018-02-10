@@ -10,7 +10,7 @@ const config = {
     authDomain: "asirisuper-d61d7.firebaseapp.com",
     databaseURL: "https://asirisuper-d61d7.firebaseio.com",
     projectId: "asirisuper-d61d7",
-    storageBucket: "",
+    storageBucket: "asirisuper-d61d7.appspot.com",
     messagingSenderId: "452244538531"
   };
 firebase.initializeApp(config);

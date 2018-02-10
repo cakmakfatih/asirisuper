@@ -1,0 +1,77 @@
+.fragment-container {
+  flex:1;
+  display:flex;
+  align-items: center;
+  background: transparent;
+  height:100%;
+  flex-direction: column;
+  color:#fff;
+  font-family:Quicksand;
+}
+.profile-picture-container {
+  width:240px;
+  height: 240px;
+  background-size: cover;
+  background-position: center;
+  margin-top:60px;
+  border-radius: 50%;
+  border:2px solid #ddd;
+}
+.image-transparency-effect {
+  position:absolute;
+  width:240px;
+  height:240px;
+  z-index: 3;
+  margin-top:60px;
+  border:2px solid #fff;
+  background:rgba(0,0,0, 0);
+  opacity:0;
+  border-radius: 50%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  transition:all .3s;
+}
+.image-transparency-effect i {
+  color:#fff;
+  font-size:35px;
+  margin:8px;
+  opacity:.4;
+}
+.image-transparency-effect i:hover {
+  opacity:1;
+}
+.image-transparency-effect:hover {
+  opacity:1;
+  background:rgba(0,0,0, .7);
+  cursor:pointer;
+}
+.username {
+  font-weight: 400;
+  margin: 0px;
+  margin-top:10px;
+}
+.loader {
+    border: 16px solid #333;
+    border-top: 16px solid #111;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 1s linear infinite;
+}
+.about {
+  max-width:50%;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+.bio {
+  font-family: Muli;
+  font-weight: 400;
+  margin:5px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

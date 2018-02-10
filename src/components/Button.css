@@ -4,10 +4,10 @@ button {
   padding-left:22px;
   padding-right:22px;
   cursor:pointer;
-  background:#2196F3;
+  background:#181821;
   color:#fff;
   margin:5px;
-  box-shadow: 0px 0px 1px 0px #1565C0;
+  box-shadow: 0px 0px 1px 0px #181821;
   font-family: Muli;
   border:none;
   border-radius: 4px;
@@ -17,7 +17,7 @@ button {
 }
 button:hover {
   background:#fff;
-  color:#1E88E5;
+  color:#111;
 }
 button:active {
   background:#ddd;

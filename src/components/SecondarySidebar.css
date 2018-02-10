@@ -1,13 +1,13 @@
 .app-secondary-sidebar {
   width:22%;
-  background:#0288d1;
+  background:#282838;
   height:100%;
   display:flex;
   flex-direction: column;
   justify-content: space-between;
 }
 .secondary-menu-item {
-  background:#0277bd;
+  background:#212129;
   height:50px;
   display:flex;
   justify-content: center;
@@ -25,12 +25,12 @@
 }
 .secondary-menu-item:hover {
   background:#fff;
-  color:#0277bd;
+  color:#222;
 }
 .secondary-active {
   background:#fff;
-  color:#0277bd;
-  border-left:8px solid #0277bd;
+  color:#212129;
+  border-left:8px solid #212129;
 }
 .secondary-active:hover {
   cursor:default;

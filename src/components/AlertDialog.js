@@ -3,11 +3,6 @@ import Button from './Button';
 import './AlertDialog.css';
 
 class AlertDialog extends Component {
-  componentWillMount(){
-    this.setState({
-      render:true
-    });
-  }
   check(e){
     if(e.target.className === "app-alert-container"){
       this.props.closeModal();
@@ -34,7 +29,6 @@ class AlertDialog extends Component {
             <h2 className="alert-title">{this.props.title}</h2>
             <p>{this.props.message}</p>
             {this.renderButtons()}
-
           </div>
         </div>
       );

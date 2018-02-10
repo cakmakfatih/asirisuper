@@ -1,0 +1,28 @@
+.app-image-container {
+  background:rgba(0,0,0,.75);
+  position:absolute;
+  display:flex;
+  width:100%;
+  height:100%;
+  top:0px;
+  left:0px;
+  align-items: center;
+  justify-content: center;
+  z-index:4;
+}
+.app-image {
+  width:60%;
+  height:80%;
+}
+.close-modal {
+  color:#fff;
+  position:fixed;
+  right:21%;
+  top:11%;
+  font-size: 30px;
+  z-index: 5;
+  cursor:pointer;
+}
+.close-modal:hover {
+  color:darkred;
+}
