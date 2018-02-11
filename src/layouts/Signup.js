@@ -68,42 +68,39 @@ class Signup extends Component {
   signUp(e){
     e.preventDefault();
     const rootRef = firebase.database().ref();
-    const keyRef = rootRef.child("keys");
     const usernamesRef = rootRef.child("usernames");
     const usersRef = rootRef.child("users");
 
-    if(this.state.key !== "" && this.state.username !== "" && this.state.email !== "" && this.state.password !== "" && this.state.passwordAgain !== ""){
-      keyRef.once('value', snap => {
-        if(snap.hasChild(this.state.key)){
-          usernamesRef.once('value', snapshot => {
-            if(snapshot.hasChild(this.state.username))
-              this.setError("Hata", "Kullanıcı adı zaten mevcut.");
-            else {
-              if(this.state.password === this.state.passwordAgain){
-                if(this.state.isAwesome){
-                    firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).catch((error) => {
-                      this.setError("Firebase Hatası", error.message);
-                      return true;
-                  }).then((e) => {
-                    if(e !== true){
-                      keyRef.child(this.state.key).remove();
-                      usernamesRef.child(this.state.username).set(firebase.auth().currentUser.email);
-                      usersRef.child(firebase.auth().currentUser.uid).set({
-                        username:this.state.username,
-                        email:this.state.email,
-                      });
-                    }
-                  });
-                } else {
-                  this.setError("Hata", "Aşırı süper olduğunu onaylamalısın.");
-                }
-              } else
-                this.setError("Hata", "Şifreler aynı değil.");
-            }
-          });
-        } else
-          this.setError("Hata", "Girilen anahtar mevcut değil.");
-      });
+    if(this.state.username !== "" && this.state.email !== "" && this.state.password !== "" && this.state.passwordAgain !== ""){
+          if(this.state.username.length >= 4 && this.state.username.length <= 12){
+            usernamesRef.once('value', snapshot => {
+              if(snapshot.hasChild(this.state.username))
+                this.setError("Hata", "Kullanıcı adı zaten mevcut.");
+              else {
+                if(this.state.password === this.state.passwordAgain){
+                  if(this.state.isAwesome){
+                      firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).catch((error) => {
+                        this.setError("Firebase Hatası", error.message);
+                        return true;
+                    }).then((e) => {
+                      if(e !== true){
+                        usernamesRef.child(this.state.username).set(firebase.auth().currentUser.email);
+                        usersRef.child(firebase.auth().currentUser.uid).set({
+                          username:this.state.username,
+                          email:this.state.email,
+                        });
+                      }
+                    });
+                  } else {
+                    this.setError("Hata", "Aşırı süper olduğunu onaylamalısın.");
+                  }
+                } else
+                  this.setError("Hata", "Şifreler aynı değil.");
+              }
+            });
+          } else {
+            this.setError("Hata", "Kullanıcı adınız 4 ila 12 karakter arasında olmalı.");
+          }
     } else {
       this.setError("Hata", "Lütfen tüm alanları doldurunuz.");
     }
@@ -138,7 +135,6 @@ class Signup extends Component {
         {this.redirect()}
         <Link to='/'><h1>aşırısüper</h1></Link>
         <form className="form-container">
-          <Input type="text" placeholder="Kayıt anahtarı" onchange={(e) => this.setField(e, "key")} val={this.state.key}/>
           <Input type="text" placeholder="Kullanıcı adı" onchange={(e) => this.setField(e, "username")} val={this.state.username}/>
           <Input type="email" placeholder="E-posta" onchange={(e) => this.setField(e, "email")} val={this.state.email}/>
           <Input type="password" placeholder="Şifre" onchange={(e) => this.setField(e, "password")} val={this.state.password}/>

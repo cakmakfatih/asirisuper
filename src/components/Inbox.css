@@ -3,6 +3,7 @@
   background: #282838;
   height:100%;
   display:flex;
+  overflow-y: scroll;
   flex-direction: column;
   align-items: center;
 }
@@ -18,13 +19,13 @@
 }
 .inbox-item:hover {
   background:#fff;
-  color:#303030;
+  color:#808080;
 }
 .inbox-pp {
   width:60px;
   height:60px;
   border-radius: 50%;
-  border:1px solid #333;
+  border:1px solid #808080;
   margin-left:5px;
   background-position: center;
   background-size: 100%, auto;
@@ -42,6 +43,26 @@
   font-size:13px;
 }
 .active-inbox-item {
-  color:#303030;
+  color:#505050;
   background:#fff;
+}
+.active-inbox-item p {
+  color:#808080;
+}
+#scroll-messages::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px #333;
+	background-color: #111;
+}
+
+#scroll-messages::-webkit-scrollbar
+{
+	width:8px;
+	background-color: #222;
+}
+
+#scroll-messages::-webkit-scrollbar-thumb
+{
+	background-color: #fff;
+	border: 1px solid #111;
 }

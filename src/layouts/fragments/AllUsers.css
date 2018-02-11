@@ -1,0 +1,68 @@
+.fragment-all-users {
+  flex:1;
+  background:#141419;
+  width:100%;
+  height: 100%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.all-users-search-container {
+  width:50%;
+}
+.all-users-page-title {
+  text-align: center;
+  font-weight: normal;
+  margin:0px;
+  margin-bottom: 10px;
+}
+.inp-search-all-users {
+  width:100%;
+  outline:none;
+  background: #181821;
+  color:#fff;
+  padding-left:10px;
+  padding-right: 10px;
+  border:1px solid #121215;
+}
+.single-user {
+  margin:5px;
+  cursor:pointer;
+}
+.app-users {
+  margin-top:10px;
+  width:65%;
+  flex-wrap: wrap;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.user-pp {
+  width:100px;
+  height:100px;
+  background-size:cover;
+  background-position: center;
+  border-radius: 50%;
+  border:1px solid #121215;
+}
+.info-single-user {
+  background:rgba(0,0,0,.9);
+  transition:all .2s;
+  position:fixed;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width:250px;
+  margin-top:-70px;
+  padding:10px;
+  margin-left:-40px;
+}
+.info-username {
+  font-family: Muli;
+  font-weight: bold;
+}
+.info-bio {
+  text-align: center;
+  margin:0px;
+}

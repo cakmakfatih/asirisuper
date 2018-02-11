@@ -94,11 +94,6 @@ class UserInfo extends Component {
             <p className="bio">{userInfo.bio}</p>
             <Button value="BIO'YU GÜNCELLE" onclick={() => this.toggleInputModal()} width="wrap-content"/>
           </div>
-          <div className="user-info">
-            <div className="single-info">
-
-            </div>
-          </div>
         </div>
       );
     } else {
